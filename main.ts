@@ -154,6 +154,7 @@ game.onUpdateInterval(1000, function () {
         info.changeScoreBy(1)
     }
 })
+// LEVEL 0
 forever(function () {
     if (indevmodemenu == 0 && (info.score() < 30 && (controller.A.isPressed() && (gamestarted == 0 && canyesno == 1)))) {
         gamestarted = 1
@@ -204,6 +205,7 @@ forever(function () {
     	
     }
 })
+// LEVEL 1
 forever(function () {
     if (gamestarted == 1 && (canyesno == 1 && candostuff == 1) && info.score() == 30) {
         sprites.destroyAllSpritesOfKind(SpriteKind.Decoration)
@@ -259,7 +261,7 @@ forever(function () {
         flagfiresquarespawned = 0
         scene.setBackgroundImage(assets.image`nothing`)
         Level = sprites.create(assets.image`level`, SpriteKind.Decoration)
-        LevelNumber = sprites.create(assets.image`1`, SpriteKind.Decoration)
+        LevelNumber = sprites.create(assets.image`2`, SpriteKind.Decoration)
         LevelNumber.x += 19
         music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.UntilDone)
         sprites.destroyAllSpritesOfKind(SpriteKind.Decoration)
@@ -304,7 +306,7 @@ forever(function () {
         flagfiresquarespawned = 0
         scene.setBackgroundImage(assets.image`nothing`)
         Level = sprites.create(assets.image`level`, SpriteKind.Decoration)
-        LevelNumber = sprites.create(assets.image`1`, SpriteKind.Decoration)
+        LevelNumber = sprites.create(assets.image`4`, SpriteKind.Decoration)
         LevelNumber.x += 19
         music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.UntilDone)
         sprites.destroyAllSpritesOfKind(SpriteKind.Decoration)
@@ -326,6 +328,44 @@ forever(function () {
                 fireball2.y += 69
             }
             flagfiresquarespawned = 3
+            fireball2.setVelocity((player1.x - fireball2.x) * 0.5, (player1.y - fireball2.y) * 0.5)
+        }
+    }
+})
+forever(function () {
+    if (gamestarted == 1 && (canyesno == 1 && candostuff == 1) && info.score() == 69) {
+        sprites.destroyAllSpritesOfKind(SpriteKind.Decoration)
+        sprites.destroyAllSpritesOfKind(SpriteKind.Player)
+        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
+        gamestarted = 0
+        candostuff = 0
+        canyesno = 0
+        FireSquareVelocityMultiplier = 0
+        flagfiresquarespawned = 0
+        scene.setBackgroundImage(assets.image`nothing`)
+        Level = sprites.create(assets.image`level`, SpriteKind.Decoration)
+        LevelNumber = sprites.create(assets.image`4`, SpriteKind.Decoration)
+        LevelNumber.x += 19
+        music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.UntilDone)
+        sprites.destroyAllSpritesOfKind(SpriteKind.Decoration)
+        picture = assets.image`Starsbg`
+        picture.replace(6, 2)
+        scene.setBackgroundImage(picture)
+        candostuff = 1
+        canyesno = 1
+        gamestarted = 1
+        player1 = sprites.create(assets.image`player`, SpriteKind.Player)
+        player1.setStayInScreen(true)
+        info.changeScoreBy(1)
+        for (let index = 0; index < 10; index++) {
+            fireball2 = sprites.create(assets.image`golden`, SpriteKind.Enemy)
+            fireball2.setBounceOnWall(true)
+            fireball2.setPosition(randint(0, 160), randint(0, 160))
+            if (player1.y - fireball2.y < 20 || player1.x - fireball2.x < 20) {
+                fireball2.x += 69
+                fireball2.y += 69
+            }
+            flagfiresquarespawned = 2
             fireball2.setVelocity((player1.x - fireball2.x) * 0.5, (player1.y - fireball2.y) * 0.5)
         }
     }

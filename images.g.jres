@@ -139,21 +139,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "nothing"
     },
-    "image32": {
-        "data": "hwQIAAgAAACQAJCZCQAJkAkACZAJAAmQCQAJkAkACZAJAAmQkJkAkA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "2"
-    },
-    "image33": {
-        "data": "hwQIAAgAAACQAAAJCQAAkAkACZAJAAmQCQAJkAkACZAJAAmQkJmQCQ==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "3"
-    },
-    "image34": {
-        "data": "hwQIAAgAAACZmQkAAAAJAAAACQAAAAkAAAAJAAAACQAAAAkAmZmZmQ==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "4"
-    },
     "image35": {
         "data": "hwQIAAgAAACZmZAJCZAAkAmQAJAJkACQCZAAkAmQAJAJkACQCQCZCQ==",
         "mimeType": "image/x-mkcd-f4",
@@ -238,6 +223,26 @@
         "data": "hwQCAAIAAABSAAAAJQAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "flame"
+    },
+    "image32": {
+        "data": "hwQIAAgAAACQAJCZCQAJkAkACZAJAAmQCQAJkAkACZAJAAmQkJkAkA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "2"
+    },
+    "image33": {
+        "data": "hwQIAAgAAACQAAAJCQAAkAkACZAJAAmQCQAJkAkACZAJAAmQkJmQCQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "3"
+    },
+    "image34": {
+        "data": "hwQIAAgAAACZmQkAAAAJAAAACQAAAAkAAAAJAAAACQAAAAkAmZmZmQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "4"
+    },
+    "image48": {
+        "data": "hwQIAAgAAABVVVVVhY+PX/X4+FiFj49f9fj4WIWPj1/1+PhYVVVVVQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "golden"
     },
     "anim1": {
         "namespace": "myAnimations",
